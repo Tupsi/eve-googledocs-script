@@ -21,7 +21,7 @@ An example below:
 https://docs.google.com/spreadsheets/d/1f9-4cb4Tx64Do-xmHhELSwZGahZ2mTTkV7mKDBRPrrY/edit?usp=sharing
 
 */
-function loadPrices(priceIDs,regionID,cachebuster){
+function loadPricesRegion(priceIDs,regionID,cachebuster){
   if (typeof regionID == 'undefined'){ 
     regionID=10000002;
   }
