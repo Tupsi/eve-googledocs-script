@@ -10,9 +10,9 @@ Sell Volume,Sell Average,Sell Max,Sell Min,Sell std Deviation,Sell Median,sell P
 
 I'd suggest loading price data into a new sheet, then using vlookup to get the bits you care about in your main sheet.
 
-=loadPrices(A1:A28)
-=loadPrices(A1:A28,10000002)
-=loadPrices(A1:A28,10000002,47)
+=loadPricesRegion(A1:A28)
+=loadPricesRegion(A1:A28,10000002)
+=loadPricesRegion(A1:A28,10000002,47)
 
 
 
