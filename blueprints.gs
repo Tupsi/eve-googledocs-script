@@ -20,7 +20,8 @@ function loadBlueprints(type, keyID, vCode, characterID){
   
   if(xml) {
     var rows=xml.getRootElement().getChild("result").getChild("rowset").getChildren("row");
-    for(var i = 0; i < rows.length; i++) {  
+    for(var i = 0; i < rows.length; i++) {
+      runs = +rows[i].getAttribute("runs").getValue();
       blueprint=[rows[i].getAttribute("itemID").getValue(),
                  rows[i].getAttribute("locationID").getValue(),
                  rows[i].getAttribute("typeID").getValue(),
@@ -29,7 +30,7 @@ function loadBlueprints(type, keyID, vCode, characterID){
                  rows[i].getAttribute("quantity").getValue(),
                  rows[i].getAttribute("timeEfficiency").getValue(),
                  rows[i].getAttribute("materialEfficiency").getValue(),
-                 rows[i].getAttribute("runs").getValue()]
+                 runs]
       blueprints.push(blueprint);
     }
   }
